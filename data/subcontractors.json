@@ -1,0 +1,57 @@
+[
+  {
+    "id": "elec-001",
+    "company": "Bright Spark Electric",
+    "contact_name": "Mike Rodriguez",
+    "email": "mike@brightspark.com",
+    "phone": "(555) 123-4567",
+    "trades": ["electrical"],
+    "rating": 4.8,
+    "typical_response_time": "2-3 days",
+    "preferred": true
+  },
+  {
+    "id": "conc-001", 
+    "company": "Solid Foundation Co",
+    "contact_name": "Dave Thompson",
+    "email": "dave@solidfoundation.com",
+    "phone": "(555) 234-5678",
+    "trades": ["concrete", "excavation"],
+    "rating": 4.6,
+    "typical_response_time": "1-2 days",
+    "preferred": true
+  },
+  {
+    "id": "hvac-001",
+    "company": "Climate Control Systems",
+    "contact_name": "Sarah Chen",
+    "email": "sarah@climatecs.com", 
+    "phone": "(555) 345-6789",
+    "trades": ["HVAC"],
+    "rating": 4.9,
+    "typical_response_time": "3-4 days",
+    "preferred": true
+  },
+  {
+    "id": "plumb-001",
+    "company": "Premier Plumbing",
+    "contact_name": "Tom Wilson",
+    "email": "tom@premierplumbing.com",
+    "phone": "(555) 456-7890", 
+    "trades": ["plumbing"],
+    "rating": 4.5,
+    "typical_response_time": "2-3 days",
+    "preferred": true
+  },
+  {
+    "id": "frame-001",
+    "company": "Precision Framing",
+    "contact_name": "Carlos Martinez",
+    "email": "carlos@precisionframe.com",
+    "phone": "(555) 567-8901",
+    "trades": ["framing", "drywall"],
+    "rating": 4.7,
+    "typical_response_time": "3-5 days", 
+    "preferred": true
+  }
+]

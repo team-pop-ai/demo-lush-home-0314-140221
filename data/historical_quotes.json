@@ -1,0 +1,47 @@
+[
+  {
+    "id": "quote-001",
+    "project_id": "house-2024-14",
+    "trade": "electrical",
+    "contractor": "Bright Spark Electric", 
+    "amount": 28500,
+    "date": "2024-01-15",
+    "status": "awarded"
+  },
+  {
+    "id": "quote-002", 
+    "project_id": "house-2024-14",
+    "trade": "concrete",
+    "contractor": "Solid Foundation Co",
+    "amount": 22000,
+    "date": "2024-01-18",
+    "status": "awarded"
+  },
+  {
+    "id": "quote-003",
+    "project_id": "house-2024-14", 
+    "trade": "HVAC",
+    "contractor": "Climate Control Systems",
+    "amount": 35000,
+    "date": "2024-01-20",
+    "status": "awarded"
+  },
+  {
+    "id": "quote-004",
+    "project_id": "house-2024-13",
+    "trade": "electrical", 
+    "contractor": "Valley Electric",
+    "amount": 42000,
+    "date": "2024-01-10",
+    "status": "declined"
+  },
+  {
+    "id": "quote-005",
+    "project_id": "house-2024-15",
+    "trade": "excavation",
+    "contractor": "Solid Foundation Co",
+    "amount": 15500,
+    "date": "2024-02-01",
+    "status": "pending"
+  }
+]

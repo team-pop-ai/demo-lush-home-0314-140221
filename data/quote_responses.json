@@ -1,0 +1,38 @@
+[
+  {
+    "id": "resp-001",
+    "project_id": "house-2024-15",
+    "contractor": "Bright Spark Electric",
+    "trade": "electrical",
+    "amount": 31200,
+    "response_date": "2024-03-05",
+    "notes": "Includes all outlet and fixture installation per plans"
+  },
+  {
+    "id": "resp-002", 
+    "project_id": "house-2024-15",
+    "contractor": "Climate Control Systems",
+    "trade": "HVAC",
+    "amount": 38500,
+    "response_date": "2024-03-06",
+    "notes": "High-efficiency system with 10-year warranty"
+  },
+  {
+    "id": "resp-003",
+    "project_id": "house-2024-16",
+    "contractor": "Premier Plumbing",
+    "trade": "plumbing", 
+    "amount": 19750,
+    "response_date": "2024-03-07",
+    "notes": "All rough-in and fixture installation included"
+  },
+  {
+    "id": "resp-004",
+    "project_id": "house-2024-15",
+    "contractor": "Budget Electric Co",
+    "trade": "electrical",
+    "amount": 18500,
+    "response_date": "2024-03-08", 
+    "notes": "Basic electrical package - fixtures not included"
+  }
+]

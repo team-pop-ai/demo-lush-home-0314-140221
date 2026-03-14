@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.name }} - Lush Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <h1>{{ project.name }}</h1>
+                <div class="header-info">
+                    <span>{{ project.address or 'TBD Address' }}</span>
+                    <span class="status-badge status-{{ project.status }}">{{ project.status }}</span>
+                </div>
+            </div>
+            <a href="/" class="back-link">← Back to Dashboard</a>
+        </header>
+
+        <div class="main-container">
+            <div class="project-workflow">
+                <h2>RFP Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Project Setup</h4>
+                            <p>Define scope and requirements</p>
+                        </div>
+                    </div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Send RFPs</h4>
+                            <p>Generate and send quote requests</p>
+                        </div>
+                    </div>
+                    <div class="step pending">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Collect Quotes</h4>
+                            <p>Track responses and follow up</p>
+                        </div>
+                    </div>
+                    <div class="step pending">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Award Contracts</h4>
+                            <p>Compare and select winners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-content">
+                    <div class="card">
+                        <h3>Project Details</h3>
+                        <div class="project-info">
+                            <div class="info-item">
+                                <label>Timeline:</label>
+                                <span>{{ project.timeline }}</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Budget:</label>
+                                <span>{{ project.budget }}</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Trades Needed:</label>
+                                <span>{{ ', '.join(project.trades_needed) }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>RFP Actions</h3>
+                        <div class="action-buttons">
+                            <button id="send-rfps-detail" class="btn-primary" 
+                                    data-project-id="{{ project.id }}" 
+                                    data-trades="{{ ', '.join(project.trades_needed) }}">
+                                Generate & Send RFPs
+                            </button>
+                            <button id="pricing-analysis" class="btn-secondary" data-project-id="{{ project.id }}">
+                                Analyze Pricing
+                            </button>
+                            <button id="mock-response" class="btn-secondary" data-project-id="{{ project.id }}">
+                                Simulate Quote Response
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="results" style="display: none;">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <aside class="sidebar-detail">
+                    <div class="card">
+                        <h3>Subcontractors ({{ subcontractors|length }})</h3>
+                        <div class="subcontractor-list">
+                            {% for sub in subcontractors %}
+                            <div class="subcontractor-item">
+                                <div class="sub-header">
+                                    <h4>{{ sub.company }}</h4>
+                                    <span class="rating">{{ sub.rating }}★</span>
+                                </div>
+                                <div class="sub-details">
+                                    <p><strong>Contact:</strong> {{ sub.contact_name }}</p>
+                                    <p><strong>Trades:</strong> {{ ', '.join(sub.trades) }}</p>
+                                    <p><strong>Response Time:</strong> {{ sub.typical_response_time }}</p>
+                                </div>
+                                <div class="sub-status status-pending">
+                                    No quote sent
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loading-text">Processing...</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

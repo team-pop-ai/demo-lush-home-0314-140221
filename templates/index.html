@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lush Home - Project Management Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Lush Home Construction</h1>
+                <div class="header-info">
+                    <span>Project Management Dashboard</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <h3>Active Projects</h3>
+                <div class="project-list">
+                    {% for project in projects %}
+                    <div class="project-item" data-project-id="{{ project.id }}" onclick="selectProject('{{ project.id }}')">
+                        <div class="project-name"># {{ project.name }}</div>
+                        <div class="project-status status-{{ project.status }}">{{ project.status }}</div>
+                        <div class="project-timeline">{{ project.timeline }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </aside>
+
+            <main class="content">
+                <div id="project-view">
+                    <div class="welcome-message">
+                        <h2>Select a project to get started</h2>
+                        <p>Choose a project from the sidebar to view RFP status, send quotes, and track responses.</p>
+                    </div>
+                </div>
+
+                <div id="project-details" style="display: none;">
+                    <div class="project-header">
+                        <h2 id="selected-project-name">Project Name</h2>
+                        <div class="project-actions">
+                            <button id="send-rfps-btn" class="btn-primary">Send RFPs</button>
+                            <button id="follow-up-btn" class="btn-secondary">Send Follow-ups</button>
+                            <button id="analyze-pricing-btn" class="btn-secondary">Analyze Pricing</button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>RFP Status</h3>
+                            <div id="rfp-status">
+                                <div class="status-item">
+                                    <span>Emails Sent:</span>
+                                    <span id="emails-sent">0</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>Quotes Received:</span>
+                                    <span id="quotes-received">0</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>Overdue:</span>
+                                    <span id="quotes-overdue">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Subcontractors</h3>
+                            <div id="subcontractor-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="results-area" style="display: none;">
+                        <div class="card">
+                            <h3>Generated RFP Emails</h3>
+                            <div id="generated-emails"></div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Pricing Analysis</h3>
+                            <div id="pricing-analysis"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div id="loading-overlay" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Generating personalized RFP emails with AI...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

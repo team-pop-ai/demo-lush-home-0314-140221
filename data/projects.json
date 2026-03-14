@@ -1,0 +1,47 @@
+[
+  {
+    "id": "house-2024-15",
+    "name": "House #2024-15",
+    "address": "1247 Maple Ridge Drive",
+    "status": "active",
+    "timeline": "Start: March 1, 2024 - Completion: August 15, 2024",
+    "budget": "$485,000",
+    "trades_needed": ["electrical", "concrete", "HVAC", "plumbing", "framing", "roofing", "drywall"]
+  },
+  {
+    "id": "house-2024-16",
+    "name": "House #2024-16", 
+    "address": "892 Oak Valley Court",
+    "status": "planning",
+    "timeline": "Start: April 1, 2024 - Completion: September 30, 2024",
+    "budget": "$520,000",
+    "trades_needed": ["excavation", "electrical", "concrete", "HVAC", "plumbing", "framing"]
+  },
+  {
+    "id": "house-2024-17",
+    "name": "House #2024-17",
+    "address": "156 Pine Creek Lane",
+    "status": "active",
+    "timeline": "Start: February 15, 2024 - Completion: July 31, 2024", 
+    "budget": "$395,000",
+    "trades_needed": ["roofing", "siding", "electrical", "HVAC", "flooring"]
+  },
+  {
+    "id": "house-2024-14",
+    "name": "House #2024-14",
+    "address": "2341 Sunset Boulevard",
+    "status": "completed",
+    "timeline": "Completed: February 2024",
+    "budget": "$465,000",
+    "trades_needed": []
+  },
+  {
+    "id": "house-2024-18",
+    "name": "House #2024-18",
+    "address": "TBD Address",
+    "status": "planning",
+    "timeline": "Start: May 1, 2024 - Completion: October 15, 2024",
+    "budget": "$550,000",
+    "trades_needed": ["excavation", "concrete", "electrical", "HVAC", "plumbing", "framing", "roofing", "siding"]
+  }
+]
